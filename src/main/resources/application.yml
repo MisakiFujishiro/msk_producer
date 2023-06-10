@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: bootstrap-servers:b-1.mafujishiromsmsk.2mkkld.c2.kafka.ap-northeast-1.amazonaws.com:9098
+    bootstrap-servers: b-2.mafujishiromsmsk.2mkkld.c2.kafka.ap-northeast-1.amazonaws.com:9098,b-1.mafujishiromsmsk.2mkkld.c2.kafka.ap-northeast-1.amazonaws.com:9098
 
 logging:
   level:
