@@ -1,17 +1,23 @@
 package com.msa.aws.msk.msk_producer;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class MskProducerApplication {
+	@Autowired
+	private MessageSender messageSender;
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(MskProducerApplication.class, args);
-
-		MessageSender messageSender = context.getBean(MessageSender.class);
-		messageSender.sendMessage("Hello, Kafka!");
-
-		// アプリケーション終了時にコンテキストを閉じる
-		context.close();
+		SpringApplication.run(MskProducerApplication.class, args);
 	}
+	public void run(String... args) {
+		if (args.length > 0) {
+			String message = args[0];
+			messageSender.sendMessage(message);
+		} else {
+			System.out.println("No message provided.");
+		}
+	}
+
 }
