@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.msa.aws.msk.msk_producer.MskProducerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.14 s - in com.msa.aws.msk.msk_producer.MskProducerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.208 s - in com.msa.aws.msk.msk_producer.MskProducerApplicationTests
